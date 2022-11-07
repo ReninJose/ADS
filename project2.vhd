@@ -14,11 +14,11 @@ entity vga_driver is
 	);
 	PORT (
 		vga_clock	: in std_logic;
-		reset			: in std_logic;
-		x				: out natural range 0 to Hd;
-		y				: out natural range 0 to Vd; 
-		hsync			: out std_logic;
-		vsync			: out std_logic;
+		reset		: in std_logic;
+		x		: out natural range 0 to Hd;
+		y		: out natural range 0 to Vd; 
+		hsync		: out std_logic;
+		vsync		: out std_logic;
 		x_valid		: out boolean;
 		y_valid		: out boolean	
 	);

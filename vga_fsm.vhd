@@ -26,6 +26,14 @@ architecture fsm of vga_fsm is
 begin
 	-- implement methodology to drive outputs here
 	-- use vga_data functions and types to make your life easier
+	process(vga_clock)
+	begin
+		hsync <= do_horizontal_sync(current_point, vga_res)
+		vsync <= do_vertical_sync(current_point, vga_res)
+
+		current_point <= next_coordinate(current_point,vga_res)
+
+	end process
 
 
 end architecture fsm;

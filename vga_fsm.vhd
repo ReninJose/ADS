@@ -30,9 +30,8 @@ begin
 	begin
 		hsync <= do_horizontal_sync(current_point, vga_res)
 		vsync <= do_vertical_sync(current_point, vga_res)
-
+		point_valid <= point_visible(current_point, vga_res)
 		current_point <= next_coordinate(current_point,vga_res)
-
 	end process
 
 

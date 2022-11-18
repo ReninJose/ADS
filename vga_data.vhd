@@ -228,13 +228,8 @@ package body vga_data is
 	begin
 		ret.x := point.x + 1;
 		ret.y := point.y;
-
-		-- ret.y = ret.y + 1
-
+		
 		-- TODO: add logic to increment y and reset y if needed
-
-		-- if ret.y = timing_range(vga_res, horizontal) then
-		--	ret.y := 0;
 
 		if ret.x = timing_range(vga_res, horizontal) then
 			ret.x := 0;

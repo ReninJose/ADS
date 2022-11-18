@@ -28,10 +28,19 @@ begin
 	-- use vga_data functions and types to make your life easier
 	process(vga_clock)
 	begin
-		hsync <= do_horizontal_sync(current_point, vga_res)
-		vsync <= do_vertical_sync(current_point, vga_res)
-		point_valid <= point_visible(current_point, vga_res)
-		current_point <= next_coordinate(current_point,vga_res)
+		if rising_edge(vga_clock) then
+			if reset = '0' then
+				current_point <= make_coordinate(0,0);
+			else
+				current_point <= make_coordinate(current_point, vga_res);
+			end if;
+		end if;
+
+		hsync <= do_horizontal_sync(current_point, vga_res);
+		vsync <= do_vertical_sync(current_point, vga_res);
+		point <= current_point;
+		point_valid <= next_coordinate(current_point,vga_res);
+
 	end process
 
 

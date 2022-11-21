@@ -31,16 +31,16 @@ package vga_data is
 				-- 1920x1080 @ 60 Hz
 				-- clock 148.5 MHz
 				horizontal => (
-						active => 2,				-- active area in pixels
-						front_porch => 2,		-- in pixels
-						sync_width => 2,			-- in pixels
-						back_porch => 	2		-- in pixels
+						active => ,				-- active area in pixels
+						front_porch => ,		-- in pixels
+						sync_width => ,			-- in pixels
+						back_porch => 			-- in pixels
 					),
 				vertical => (
-						active => 2,				-- active area in lines
-						front_porch => 2,		-- in lines
-						sync_width => 2,			-- in lines
-						back_porch => 	2		-- in lines
+						active => ,				-- active area in lines
+						front_porch => ,		-- in lines
+						sync_width => ,			-- in lines
+						back_porch => 			-- in lines
 					),
 				sync_polarity => active_high
 			), (
@@ -58,7 +58,7 @@ package vga_data is
 						sync_width => 2,
 						back_porch => 33
 					),
-				sync_polarity => active_low
+				sync_polarity => active_high
 			), (
 				-- 800x600 @ 60Hz
 				-- clock 40 MHz
@@ -74,7 +74,6 @@ package vga_data is
 						sync_width => 4,
 						back_porch => 23
 					),
-				sync_polarity => active_low
 			)
 		);
 
@@ -198,7 +197,7 @@ package body vga_data is
 			vga_res:	in	vga_timing := vga_res_default
 		) return boolean is
 	begin
-		return point.y < vga_res.vertical.active;
+		return point.y < vga_res.vertical.active
 	end function y_visible;
 
 	function point_visible (
@@ -258,7 +257,7 @@ package body vga_data is
 		) return std_logic is
 	begin
 		-- TODO: implement
-		return do_sync(point, vga_res, vertical);
+		return do_sync(point, vga_res, vertical)
 	end function do_vertical_sync;
 
 end package body vga_data;

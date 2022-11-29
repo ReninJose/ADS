@@ -1,0 +1,14 @@
+v 4
+file . "pipeline_stage.vhd" "265dc2d305eec38eca1f6a2b8a1b0b4e90758268" "20221129014607.301":
+  entity pipeline_stage at 1( 0) + 0 on 19;
+  architecture rtl of pipeline_stage at 25( 445) + 0 on 20;
+file . "mandelbrot_netpbm_generator.vhd" "b0f03ef0572aa3b63a0a8d8abe59234c10192e2c" "20221129042405.222":
+  entity mandelbrot_netpbm_generator at 1( 0) + 0 on 42;
+  architecture test_fixture of mandelbrot_netpbm_generator at 15( 239) + 0 on 43;
+file . "netpbm_config.vhd" "ca43f103ca2d0b32673cf78fd2bb969f36f96907" "20221129020046.803":
+  package netpbm_config at 1( 0) + 0 on 25;
+file . "pipeline_pkg.vhd" "1aaa51ba4cbae705c95eb38231a26c0e4d61090a" "20221129014604.610":
+  package pipeline_pkg at 1( 0) + 0 on 18;
+file . "pipeline.vhd" "89aacfee80bfb9d2ab5cf09b5169d17cc253e42d" "20221129014627.990":
+  entity pipeline at 1( 0) + 0 on 21;
+  architecture pip of pipeline at 27( 498) + 0 on 22;

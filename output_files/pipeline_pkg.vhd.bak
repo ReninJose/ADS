@@ -1,5 +1,0 @@
-
-type pipeline_signals is
-record
-
-end record pipeline_signals;

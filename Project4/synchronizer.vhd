@@ -29,7 +29,7 @@ begin
 			input_width => input_width
 		)
 		port map(
-			bin_in <= bin_in,
+			bin_in => bin_in,
 			gray_out => gray_output
 		);
 		
@@ -38,7 +38,7 @@ begin
 			input_width => input_width
 		)
 		port map(
-			gray_in <= sig_c,
+			gray_in => sig_c,
 			bin_out => bin_out
 		);
 		

@@ -30,7 +30,7 @@ entity ram_buffer is
 		q_b		: out std_logic_vector((DATA_WIDTH -1) downto 0)
 	);
 
-end ram_buffer;
+end entity ram_buffer;
 
 architecture rtl of ram_buffer is
 
@@ -65,4 +65,4 @@ begin
 	end if;
 	end process;
 
-end rtl;
+end architecture rtl;

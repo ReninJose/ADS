@@ -136,4 +136,4 @@ begin
 			eoc		=> eoc,
 			clk_dft	=> clk_dft
 		);
-end architecture rtl
+end architecture rtl;

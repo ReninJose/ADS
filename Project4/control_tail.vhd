@@ -6,7 +6,7 @@ entity control_tail is
 		buffer_size:  positive:= 20
 	);
 	port(
-		clk_50: 	in	std_logic;
+		clock_50: 	in	std_logic;
 		reset: 	in	std_logic;
 		head:		in	natural range 0 to buffer_size-1;
 		
@@ -16,9 +16,9 @@ end entity control_tail;
 
 architecture rtl of control_tail is
 
-	function can_advance_tail is (
+	function can_advance_tail (
 		head_pointer:	in natural range 0 to buffer_size - 1;
-		tail_pointer: 	in natural range 0 to buffer_size - 1;
+		tail_pointer: 	in natural range 0 to buffer_size - 1
 	) return boolean
 	is
 	begin
@@ -39,6 +39,7 @@ begin
 		tail <= tail_ptr;
 		
 		transition_process: process(state, tail_ptr, head) is
+		begin
 			case state is
 		
 				when read_state =>
@@ -49,9 +50,9 @@ begin
 							next_state <= read_state;
 						else
 							next_state <= wait_state;
-						end if
+						end if;
 			end case;
-		end process transition_process
+		end process transition_process;
 		
 	save_state: process(clock_50, reset) is
 	begin
@@ -77,6 +78,6 @@ begin
 		end if;
 	end process output_function;
 	
-end architecture rtl
+end architecture rtl;
 
 

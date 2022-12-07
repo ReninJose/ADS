@@ -27,9 +27,9 @@ architecture rtl of control_head is
 		) return boolean
 	is
 	begin
-		if head > tail and not (head = buffer_size - 1 and tail = 0) then
+		if head_pointer > tail_pointer and not (head_pointer = buffer_size - 1 and tail_pointer = 0) then
 			return true;
-		elsif tail > head and (tail - head) > 1 then
+		elsif tail_pointer > head_pointer and (tail_pointer - head_pointer) > 1 then
 			return true;
 		end if;
 		return false;

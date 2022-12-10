@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "hex_digits[2].g",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[2].f",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[2].e",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[2].d",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[2].c",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[2].b",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[2].a",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[1].g",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[1].f",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[1].e",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[1].d",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[1].c",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[1].b",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[1].a",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[0].g",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[0].f",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[0].e",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[0].d",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[0].c",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[0].b",
+					"strict" : false
+				},
+				{
+					"name" : "hex_digits[0].a",
+					"strict" : false
+				},
+				{
+					"name" : "clock_50",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

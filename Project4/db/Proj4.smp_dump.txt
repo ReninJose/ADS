@@ -1,0 +1,7 @@
+
+State Machine - |toplevel|control_head:head_control|state
+Name state.store state.wait_buffer state.wait_eoc state.start 
+state.start 0 0 0 0 
+state.wait_eoc 0 0 1 1 
+state.wait_buffer 0 1 0 1 
+state.store 1 0 0 1 

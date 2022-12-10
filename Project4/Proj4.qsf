@@ -42,13 +42,17 @@ set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name TOP_LEVEL_ENTITY toplevel
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:56:36  DECEMBER 06, 2022"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name BOARD "MAX 10 DE10 - Lite"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_FILE max10_adc.vhd
 set_global_assignment -name VHDL_FILE gray_to_bin.vhd
 set_global_assignment -name VHDL_FILE bin_to_gray.vhd
@@ -56,12 +60,54 @@ set_global_assignment -name VHDL_FILE record_project4.vhd
 set_global_assignment -name VHDL_FILE project_pkg.vhd
 set_global_assignment -name VHDL_FILE synchronizer.vhd
 set_global_assignment -name VHDL_FILE control_head.vhd
-set_global_assignment -name BOARD "MAX 10 DE10 - Lite"
 set_global_assignment -name QIP_FILE pll.qip
 set_global_assignment -name VHDL_FILE ram_buffer.vhd
 set_global_assignment -name VHDL_FILE toplevel.vhd
 set_global_assignment -name VHDL_FILE control_tail.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_N5 -to clock_10
+set_location_assignment PIN_P11 -to clock_50
+set_location_assignment PIN_B8 -to reset
+set_global_assignment -name TCL_SCRIPT_FILE place_hex_degit.tcl
+set_location_assignment PIN_C14 -to hex_digits[0].a
+set_location_assignment PIN_E15 -to hex_digits[0].b
+set_location_assignment PIN_C15 -to hex_digits[0].c
+set_location_assignment PIN_C16 -to hex_digits[0].d
+set_location_assignment PIN_E16 -to hex_digits[0].e
+set_location_assignment PIN_D17 -to hex_digits[0].f
+set_location_assignment PIN_C17 -to hex_digits[0].g
+set_location_assignment PIN_C18 -to hex_digits[1].a
+set_location_assignment PIN_D18 -to hex_digits[1].b
+set_location_assignment PIN_E18 -to hex_digits[1].c
+set_location_assignment PIN_B16 -to hex_digits[1].d
+set_location_assignment PIN_A17 -to hex_digits[1].e
+set_location_assignment PIN_A18 -to hex_digits[1].f
+set_location_assignment PIN_B17 -to hex_digits[1].g
+set_location_assignment PIN_B20 -to hex_digits[2].a
+set_location_assignment PIN_A20 -to hex_digits[2].b
+set_location_assignment PIN_B19 -to hex_digits[2].c
+set_location_assignment PIN_A21 -to hex_digits[2].d
+set_location_assignment PIN_B21 -to hex_digits[2].e
+set_location_assignment PIN_C22 -to hex_digits[2].f
+set_location_assignment PIN_B22 -to hex_digits[2].g
+set_location_assignment PIN_F21 -to hex_digits[3].a
+set_location_assignment PIN_E22 -to hex_digits[3].b
+set_location_assignment PIN_E21 -to hex_digits[3].c
+set_location_assignment PIN_C19 -to hex_digits[3].d
+set_location_assignment PIN_C20 -to hex_digits[3].e
+set_location_assignment PIN_D19 -to hex_digits[3].f
+set_location_assignment PIN_E17 -to hex_digits[3].g
+set_location_assignment PIN_F18 -to hex_digits[4].a
+set_location_assignment PIN_E20 -to hex_digits[4].b
+set_location_assignment PIN_E19 -to hex_digits[4].c
+set_location_assignment PIN_J18 -to hex_digits[4].d
+set_location_assignment PIN_H19 -to hex_digits[4].e
+set_location_assignment PIN_F19 -to hex_digits[4].f
+set_location_assignment PIN_F20 -to hex_digits[4].g
+set_location_assignment PIN_J20 -to hex_digits[5].a
+set_location_assignment PIN_K20 -to hex_digits[5].b
+set_location_assignment PIN_L18 -to hex_digits[5].c
+set_location_assignment PIN_N18 -to hex_digits[5].d
+set_location_assignment PIN_M20 -to hex_digits[5].e
+set_location_assignment PIN_N19 -to hex_digits[5].f
+set_location_assignment PIN_N20 -to hex_digits[5].g
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
